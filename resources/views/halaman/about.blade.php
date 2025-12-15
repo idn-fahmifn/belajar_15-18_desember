@@ -13,6 +13,7 @@
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, pariatur!</p>
 
     <a href="{{ route('index.halaman') }}">Back to home</a>
+
 </body>
 
 </html>

@@ -43,5 +43,20 @@ Route::get('about', function(){
     return view('halaman.about');
 })->name('about.halaman');
 
+// rooute group 
+Route::prefix('training')->group(function(){
+
+    Route::get('laravel', function(){
+        return 'Ini adalah kelas laravel';
+    });
+    Route::get('mtcna', function(){
+        return 'Ini adalah kelas mtcna';
+    });
+    Route::get('kotlin', function(){
+        return 'Ini adalah kelas kotlin';
+    });
+    
+});
+
 
 
