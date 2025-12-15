@@ -12,6 +12,8 @@
     <p>Kebutuhan bulan ini : {{ $kebutuhan }}</p>
     <h2>Saldo saya saat ini : {{ $total }}</h2>
 
+    <a href="{{ route('about.halaman') }}">about me</a>
+
 
 </body>
 </html>

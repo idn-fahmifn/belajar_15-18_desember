@@ -37,8 +37,11 @@ Route::get('halaman-index', function(){
         'kebutuhan' => $kebutuhan,
         'total' => $hasil
     ]);
+})->name('index.halaman');
 
-});
+Route::get('about', function(){
+    return view('halaman.about');
+})->name('about.halaman');
 
 
 
