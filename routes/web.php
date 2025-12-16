@@ -3,7 +3,6 @@
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UmurController;
-use App\Http\Middleware\UmurMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -75,7 +74,7 @@ Route::resource('kategori', KategoriController::class);
 // halaman form
 Route::get('form', [UmurController::class, 'form'])->name('umur.form');
 Route::get('success', [UmurController::class, 'success'])
-->middleware(UmurMiddleware::class)
+->middleware(['age'])
 ->name('umur.success');
 Route::post('proses', [UmurController::class, 'proses'])->name('umur.proses');
  

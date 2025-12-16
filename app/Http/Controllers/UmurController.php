@@ -18,8 +18,16 @@ class UmurController extends Controller
 
     public function proses(Request $request)
     {
+        
+
+        $request->validate([
+            'name' => ['string', 'min:3', 'max:20', 'required'],
+            'age' => ['integer', 'min:1', 'max:99', 'required']
+        ]);
+
         $request->session()->put('umur', $request->input('age'));
         return redirect()->route('umur.success');
+
     }
 
 }
