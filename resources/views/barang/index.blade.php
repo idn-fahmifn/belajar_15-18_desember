@@ -23,7 +23,7 @@
                     <td>{{ $item->kode_barang }}</td>
                     <td>{{ $item->stok }}</td>
                     <td>
-                        <a href="">detail</a>
+                        <a href="{{ route('barang.detail', $item->kode_barang) }}">detail</a>
                     </td>
                 </tr>
             @empty
