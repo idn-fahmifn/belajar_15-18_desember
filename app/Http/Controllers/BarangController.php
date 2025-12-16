@@ -19,7 +19,10 @@ class BarangController extends Controller
     }
     public function detail($param)
     {
-        return "ini adalah detail ".$param;
+        // $data = Barang::findOrFail($param); //mencari id yang dpilih.
+        // recomended* panggil berdasarkan column yang unique (slug, kode lainnya.)
+        $data = Barang::where('kode_barang', $param)->first();
+        return view('barang.detail', compact('data'));
     }
 
 }

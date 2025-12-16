@@ -64,7 +64,7 @@ Route::prefix('training')->group(function () {
 
 Route::get('barang', [BarangController::class, 'index'])->name('barang.index');
 Route::get('about/barang', [BarangController::class, 'about'])->name('barang.about');
-Route::get('about/{param}', [BarangController::class, 'detail'])->name('barang.detail');
+Route::get('barang/{param}', [BarangController::class, 'detail'])->name('barang.detail');
 
 Route::resource('kategori', KategoriController::class);
 

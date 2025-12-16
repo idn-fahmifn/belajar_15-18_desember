@@ -27,7 +27,10 @@
                     </td>
                 </tr>
             @empty
-                
+                {{-- jika data pada tabel barang kosong --}}
+                <tr>
+                    <td colspan="4" style="text-align:center;">Belum ada data.</td>
+                </tr>
             @endforelse
         </tbody>
     </table>
